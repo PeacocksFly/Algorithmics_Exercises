@@ -13,16 +13,18 @@ FlattenBinaryTreeToLinkedList::FlattenBinaryTreeToLinkedList() {
 
 FlattenBinaryTreeToLinkedList::~FlattenBinaryTreeToLinkedList() {
 
-	link t = head;
-	link g = nullptr;
+	clearTreeR(head);
+}
 
-	while (t != nullptr) {
-		g = t;
-		t = t->l;
-		delete g;
-	}
+void FlattenBinaryTreeToLinkedList::clearTreeR(link h) {
 
-	
+	if (h == nullptr) return;
+	link l = nullptr, r = nullptr;
+	if (h->l != nullptr) l = h->l;
+	if (h->r != nullptr) r = h->r;
+	delete h;
+	clearTreeR(l);
+	clearTreeR(r);
 }
 
 void FlattenBinaryTreeToLinkedList::preOrderTraversalR(link h) {
@@ -55,4 +57,21 @@ void FlattenBinaryTreeToLinkedList::flattenR(link h) {
 	flattenR(h->l);
 	flattenR(h->r);
 
+}
+
+void printR(std::ostream& os, FlattenBinaryTreeToLinkedList::link h) {
+
+	if (h == nullptr) return;
+	os << h->val;
+	printR(os, h->l);
+	printR(os, h->r);
+
+}
+
+std::ostream& operator<<(std::ostream& os, const FlattenBinaryTreeToLinkedList& tree) {
+
+	FlattenBinaryTreeToLinkedList::link h = tree.head;
+	printR(os, h);
+	
+	return os;
 }

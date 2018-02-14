@@ -43,6 +43,8 @@ private:
 
 	void flattenR(link);
 	void preOrderTraversalR(link);
+	void clearTreeR(link);
+	friend void printR(std::ostream&, link);
 	
 
 public:
@@ -50,5 +52,7 @@ public:
 	~FlattenBinaryTreeToLinkedList();
 	void flatten() { flattenR(head); };
 	void preOrderTraversal() { preOrderTraversalR(head); }
+
+	friend std::ostream& operator<<(std::ostream&, const FlattenBinaryTreeToLinkedList&);
 
 };

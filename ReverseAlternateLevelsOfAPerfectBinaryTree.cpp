@@ -27,14 +27,18 @@ ReverseAlternateLevelsOfAPerfectBinaryTree::ReverseAlternateLevelsOfAPerfectBina
 
 ReverseAlternateLevelsOfAPerfectBinaryTree::~ReverseAlternateLevelsOfAPerfectBinaryTree() {
 
-	link t = head;
-	link g = nullptr;
+	clearTreeR(head);
+}
 
-	while (t != nullptr) {
-		g = t;
-		t = t->l;
-		delete g;
-	}
+void ReverseAlternateLevelsOfAPerfectBinaryTree::clearTreeR(link h) {
+
+	if (h == nullptr) return;
+	link l = nullptr, r = nullptr;
+	if (h->l != nullptr) l = h->l;
+	if (h->r != nullptr) r = h->r;
+	delete h;
+	clearTreeR(l);
+	clearTreeR(r);
 }
 
 

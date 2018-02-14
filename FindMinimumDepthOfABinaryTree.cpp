@@ -16,16 +16,19 @@ FindMinimumDepthOfABinaryTree::FindMinimumDepthOfABinaryTree() {
 
 FindMinimumDepthOfABinaryTree::~FindMinimumDepthOfABinaryTree() {
 
-	link t = head;
-	link g = nullptr;
-
-	while (t != nullptr) {
-		g = t;
-		t = t->l;
-		delete g;
-	}
+	clearTreeR(head);
 }
 
+void FindMinimumDepthOfABinaryTree::clearTreeR(link h) {
+
+	if (h == nullptr) return;
+	link l = nullptr, r = nullptr;
+	if (h->l != nullptr) l = h->l;
+	if (h->r != nullptr) r = h->r;
+	delete h;
+	clearTreeR(l);
+	clearTreeR(r);
+}
 
 int FindMinimumDepthOfABinaryTree::minimumLengthR(link h) {
 	

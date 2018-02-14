@@ -21,6 +21,7 @@ private:
 	link head;
 	link tail;
 	void sortR(link, link);
+	
 
 
 public:
