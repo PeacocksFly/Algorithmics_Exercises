@@ -39,10 +39,7 @@ RemoveNodesOnRootToLeafPathBelowK::~RemoveNodesOnRootToLeafPathBelowK() {
 
 void RemoveNodesOnRootToLeafPathBelowK::clearTreeR(link& h) {
 
-	if (!h) {
-
-		return; 
-	}
+	if (!h) return; 
 	link l = nullptr, r = nullptr;
 	if (h->l) l = h->l;
 	if (h->r) r = h->r;
