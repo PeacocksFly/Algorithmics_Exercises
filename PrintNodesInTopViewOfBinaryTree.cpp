@@ -25,6 +25,7 @@ void PrintNodesInTopViewOfBinaryTree::clearTreeR(link h) {
 	if (h->l != nullptr) l = h->l;
 	if (h->r != nullptr) r = h->r;
 	delete h;
+	h = nullptr;
 	clearTreeR(l);
 	clearTreeR(r);
 }

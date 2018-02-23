@@ -19,13 +19,14 @@ FindMinimumDepthOfABinaryTree::~FindMinimumDepthOfABinaryTree() {
 	clearTreeR(head);
 }
 
-void FindMinimumDepthOfABinaryTree::clearTreeR(link h) {
+void FindMinimumDepthOfABinaryTree::clearTreeR(link& h) {
 
 	if (h == nullptr) return;
 	link l = nullptr, r = nullptr;
 	if (h->l != nullptr) l = h->l;
 	if (h->r != nullptr) r = h->r;
 	delete h;
+	h = nullptr;
 	clearTreeR(l);
 	clearTreeR(r);
 }

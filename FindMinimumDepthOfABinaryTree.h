@@ -22,7 +22,7 @@ private:
 	typedef node* link;
 	link head;
 	int minimumLengthR(link);
-	void clearTreeR(link);
+	void clearTreeR(link&);
 
 
 public:

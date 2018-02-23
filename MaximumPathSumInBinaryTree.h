@@ -30,7 +30,7 @@ private:
 	typedef node* link;
 	link head;
 	int maximumPath;
-	void clearTreeR(link);
+	void clearTreeR(link&);
 	int maximumSumPathR(link);
 
 public:

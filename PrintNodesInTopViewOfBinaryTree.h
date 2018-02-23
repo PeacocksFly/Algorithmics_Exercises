@@ -47,7 +47,7 @@ private:
 	typedef node* link;
 	link head;
 	void printR(link);
-	void clearTreeR(link);
+	void clearTreeR(link&);
 
 public:
 	PrintNodesInTopViewOfBinaryTree();

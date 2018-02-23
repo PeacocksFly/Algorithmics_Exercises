@@ -18,7 +18,7 @@ private:
 
 	typedef node* link;
 	link head;
-	void clearTreeR(link);
+	void clearTreeR(link&);
 	int isFullBinaryTreeR(link);
 
 public:

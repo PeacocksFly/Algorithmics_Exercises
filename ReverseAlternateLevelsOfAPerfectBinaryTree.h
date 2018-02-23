@@ -39,7 +39,7 @@ private:
 	link head;
 	void swapR(std::deque<link>::iterator, std::deque<link>::reverse_iterator);
 	void reverseR(link);
-	void clearTreeR(link);
+	void clearTreeR(link&);
 
 
 public:

@@ -17,13 +17,14 @@ CheckIfFullBinaryTreeOrNot::~CheckIfFullBinaryTreeOrNot() {
 	clearTreeR(head);
 }
 
-void CheckIfFullBinaryTreeOrNot::clearTreeR(link h) {
+void CheckIfFullBinaryTreeOrNot::clearTreeR(link& h) {
 
 	if (!h) return;
 	link l = nullptr, r = nullptr;
 	if (h->l) l = h->l;
 	if (h->r) r = h->r;
 	delete h;
+	h = nullptr;
 	clearTreeR(l);
 	clearTreeR(r);
 }
