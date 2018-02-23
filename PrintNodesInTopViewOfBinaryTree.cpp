@@ -18,7 +18,7 @@ PrintNodesInTopViewOfBinaryTree::~PrintNodesInTopViewOfBinaryTree() {
 	clearTreeR(head);
 }
 
-void PrintNodesInTopViewOfBinaryTree::clearTreeR(link h) {
+void PrintNodesInTopViewOfBinaryTree::clearTreeR(link& h) {
 
 	if (h == nullptr) return;
 	link l = nullptr, r = nullptr;
