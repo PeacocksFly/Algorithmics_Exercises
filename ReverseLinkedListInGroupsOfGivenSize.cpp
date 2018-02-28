@@ -11,7 +11,7 @@ ReverseLinkedListInGroupsOfGivenSize::~ReverseLinkedListInGroupsOfGivenSize() {
 }
 
 
-void ReverseLinkedListInGroupsOfGivenSize::reverse(int k) {
+void ReverseLinkedListInGroupsOfGivenSize::reverseNR(int k) {
 	
 	link s = _head; 
 	if (!s) return;

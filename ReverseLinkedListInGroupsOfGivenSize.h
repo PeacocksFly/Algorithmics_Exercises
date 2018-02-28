@@ -29,6 +29,6 @@ public:
 	ReverseLinkedListInGroupsOfGivenSize() : _head(nullptr) {}
 	~ReverseLinkedListInGroupsOfGivenSize();
 	void insert(int _value) { _head = new node(_value, _head); };
-	void reverse(int);
+	void reverseNR(int);
 	friend std::ostream& operator<<(std::ostream&, const ReverseLinkedListInGroupsOfGivenSize&);
 };
